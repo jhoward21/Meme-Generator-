@@ -4,14 +4,27 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function MyApp() {
+  return (
+  <div
+  ><h1>Hello World!</h1>
+    <h2>This is a list of sports</h2>
+    <p>I love sports and enjoy playing them.</p>
+    <ul>
+  <li>Football</li>
+  <li>Baseball</li>
+  <li>Basketball</li>
+    </ul>
+  </div>
+  )
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+//JSX
+ReactDOM.render(
+  <MyApp />,
+document.getElementById
+("root"))
+
+
+
