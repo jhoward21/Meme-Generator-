@@ -5,10 +5,13 @@ import Footer from "./components/Footer"
 import TodoItem from "./components/TodoItem"
 import ContactCard from "./components/ContactCard"
 import Joke from "./components/Joke"
+import jokesdata from "./components/jokesdata"
 
 function App() {
+    const jokeComponents = jokesdata.map(joke => <Joke key={joke.id} question={joke.question} puchLine={joke.puchLine} />
+        )
     return (
-      <div>
+    <div>
         <Header />
         <MainContent />
         <ContactCard 
@@ -45,7 +48,7 @@ function App() {
         <TodoItem />
         <TodoItem />
         <Footer />
-      </div>
+    </div>
     )
 }
 
