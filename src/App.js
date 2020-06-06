@@ -9,6 +9,7 @@ import jokesdata from "./components/jokesdata"
 import todosData from "./components/todosData"
 import StatePractice from "./components/StatePractice"
 import StatePractice2 from "./components/StatePractice2"
+import Numbers from "./components/Numbers"
 
 // function App() {
 //     const jokeComponents = jokesdata.map(joke => <Joke key={joke.id} question={joke.question} puchLine={joke.puchLine} />
@@ -106,6 +107,10 @@ class App extends React.Component {
             <StatePractice />
             <StatePractice2 />
             <h1>Is state important to know? {this.state.answer}</h1>
+            <br />
+            <br />
+            <button onCLick={() => {console.log("I was clicked!")}}>Click Me</button>
+            <Numbers />
         </div>
         )
     }
