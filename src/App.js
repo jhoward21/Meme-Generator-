@@ -10,6 +10,8 @@ import todosData from "./components/todosData"
 import StatePractice from "./components/StatePractice"
 import StatePractice2 from "./components/StatePractice2"
 import Numbers from "./components/Numbers"
+import Conditional from "./components/Conditional"
+import Conditional2 from "./components/Conditional2"
 
 // function App() {
 //     const jokeComponents = jokesdata.map(joke => <Joke key={joke.id} question={joke.question} puchLine={joke.puchLine} />
@@ -60,8 +62,17 @@ class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            answer: "yes"
+            answer: "yes",
+            isLoading: true,
+            login: true
         }
+    }
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                isLoading: false
+            })
+        }, 1500)
     }
     render() {
         const jokeComponents = jokesdata.map(joke => <Joke key={joke.id} question={joke.question} puchLine={joke.puchLine} />
@@ -111,6 +122,9 @@ class App extends React.Component {
             <br />
             <button onCLick={() => {console.log("I was clicked!")}}>Click Me</button>
             <Numbers />
+            <Conditional isLoading={this.state.isLoading}/>
+            <Conditional2 isLoading={this.state.isLoading}/>
+            <button onCLick={() => {console.log("You logged in!!")}}>Log in</button>
         </div>
         )
     }
