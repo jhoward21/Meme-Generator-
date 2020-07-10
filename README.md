@@ -70,4 +70,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 =======
 # Meme-Genorator-
 Small basic react project
+[![Run on Repl.it](https://repl.it/badge/github/jhoward21/React.js-Practice)](https://repl.it/github/jhoward21/React.js-Practice)
 >>>>>>> 41805759b55700266412ab478be8570e27fb42d5
